@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Connectez-vous</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- ion-padding: 固定样式，添加内边距 -->
+<ion-content class="ion-padding">
+<ion-card>
+  <ion-item>
+    <ion-label>Identifiant:</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Mot de pass:</ion-label>
+    <ion-input type="password" [(ngModel)]="pwd"></ion-input>
+  </ion-item>
+</ion-card>
+<ion-button expand="block" (click)="login()">
+Enregister
+</ion-button>
+<h5>Autre comptes</h5>
+
+<ion-button color="danger">
+  <ion-icon name="logo-angular"></ion-icon>
+</ion-button>
+
+<ion-button color="light">
+  <ion-icon name="logo-apple"></ion-icon>
+</ion-button>
+<ion-button color="primary">
+  <ion-icon name="logo-facebook"></ion-icon>
+</ion-button>
+<ion-button color="dark">
+  <ion-icon name="logo-github"></ion-icon>
+</ion-button>
+<ion-button color="success">
+  <ion-icon name="logo-wechat"></ion-icon>
+</ion-button>
+<ion-button color="warning">
+  <ion-icon name="logo-snapchat"></ion-icon>
+</ion-button>
+</ion-content>
