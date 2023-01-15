@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Détail du film</ion-title>
+    <ion-button fill="clear" slot="end">
+      <ion-icon name="download" color="dark"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="res">
+  <ion-item >
+    <ion-label>{{res.titre}}</ion-label>
+  </ion-item>
+<ion-slides pager 
+          [options]="{loop:true, autoplay: {disableOnInteraction:false}}">
+    <ion-slide>
+    <img src="https://img.freepik.com/photos-gratuite/belle-fille-africaine-coiffure-drole-regardant-film-au-cinema_7502-4609.jpg?w=1800&t=st=1673800748~exp=1673801348~hmac=d60f9251951cb15c1a3344b3b7151f024185e948c45dbf5dcc54a8343d508c36" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="https://img.freepik.com/photos-gratuite/clapperboard-pres-seau-pop-corn-lunettes-3d_23-2147698988.jpg?w=1800&t=st=1673800799~exp=1673801399~hmac=dfe24a702686cdc6c0731e65161f89e3e2e64a70ddd5cf1586069863837fd520" alt="">
+    </ion-slide>
+    <ion-slide>
+    <img src="https://img.freepik.com/photos-gratuite/assortiment-lunettes-3d-clapper-board-pour-films_23-2149558734.jpg?w=1800&t=st=1673800814~exp=1673801414~hmac=9f8d7041efd3a92f8033a5289c407ca2d20632eea96e184d5ad56f42c96e8afc" alt="">
+  </ion-slide>
+</ion-slides>
+  
+
+  <ion-card>
+    <ion-card-header>
+     
+      <ion-card-title>{{res.titre}}</ion-card-title> <ion-card-subtitle>{{res.realisateur}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>{{res.dureeTotale}}</ion-label>
+        <ion-button size="default" color="success" slot="end">
+          <ion-icon name="reload" slot="start"></ion-icon>
+          Regarder
+        </ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

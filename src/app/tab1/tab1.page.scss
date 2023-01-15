@@ -21,3 +21,11 @@ ion-card-subtitle{
   white-space: nowrap;
 
 }
+
+ion-slide{
+  img{
+    width:300px;
+    height:350px;
+    object-fit: cover;
+  }
+}

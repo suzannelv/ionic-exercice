@@ -34,5 +34,67 @@
     </ion-col>
     
   </ion-row>
+ </ion-grid><ion-item>
+  <ion-icon name="videocam-outline" slot="start"></ion-icon>
+  <ion-label>Favorie</ion-label>
+ </ion-item>
+
+ <ion-grid fixed>
+  <ion-row>
+    <ion-col size="6" *ngFor="let item of res">
+      <ion-card>
+      <ion-card-header>
+        <img src="{{item.imageUrl}}" alt=""> 
+        <ion-card-title>{{item.titre}}</ion-card-title>
+        <ion-card-subtitle>{{item.description}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>{{item.dureeTotale}}</ion-label>
+        <ion-button>Regarder</ion-button>
+      </ion-card-content>
+    </ion-card>
+    </ion-col>
+    
+  </ion-row>
+ </ion-grid><ion-item>
+  <ion-icon name="videocam-outline" slot="start"></ion-icon>
+  <ion-label>Découvrir plus</ion-label>
+ </ion-item>
+
+ <ion-grid fixed>
+  <ion-row>
+    <ion-col size="6" *ngFor="let item of res">
+      <ion-card>
+      <ion-card-header>
+        <img src="{{item.imageUrl}}" alt=""> 
+        <ion-card-title>{{item.titre}}</ion-card-title>
+        <ion-card-subtitle>{{item.description}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>{{item.dureeTotale}}</ion-label>
+        <ion-button>Regarder</ion-button>
+      </ion-card-content>
+    </ion-card>
+    </ion-col>
+    
+  </ion-row>
  </ion-grid>
+
+ <ion-grid fixed>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="pricetags" color="medium" style="font-size:4em"></ion-icon>
+    </ion-col>
+    <ion-col>
+      <ion-icon name="notifications" color="medium" style="font-size:4em"></ion-icon>
+    </ion-col>
+    <ion-col>
+      <ion-icon name="heart" color="medium" style="font-size:4em"></ion-icon>
+    </ion-col>
+    <ion-col>
+      <ion-icon name="film" color="medium" style="font-size:4em"></ion-icon>
+    </ion-col>
+  </ion-row>
+ </ion-grid>
+
 </ion-content>

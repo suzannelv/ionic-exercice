@@ -1,17 +1,29 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-searchbar placeholder="chercher" ></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" >
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-item *ngFor="let item of res" 
+             lines="full" 
+             button detail 
+             [routerLink]="['/detail', {index:item._id}]">
+    <img src="{{item.imageUrl}}" alt="" slot="start" style="width:70px; height:70px; margin-right:10px;">
+    <ion-label>
+      <h4>{{item.titre}}</h4>
+      <p>{{item.years}}</p>
+    </ion-label>
+  </ion-item>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-infinite-scroll [disabled]="false" position="bottom" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more movies...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  <ion-button expand="full" disabled>
+     Fini
+  </ion-button>
 </ion-content>

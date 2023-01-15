@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,7 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-
-  constructor() {}
-
+  res:any;
+  constructor(public http: HttpClient) {}
+ngOnInit(): void {
+ this.http.get("http://sangria-walkingstick-kit.cyclic.app/api/movies").subscribe((res)=>{
+  console.log(res)
+  this.res=res
+ })
+  
+}
 }
